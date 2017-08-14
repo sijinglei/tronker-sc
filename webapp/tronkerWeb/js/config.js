@@ -11,7 +11,13 @@ require.config({
         rejs: 'plugins/rejs',
         metisMenu: 'plugins/metisMenu/jquery.metisMenu',
         layer: 'plugins/layer/layer.min',
-        slimScroll: 'plugins/slimScroll/jquery.slimscroll.min'
+        slimScroll: 'plugins/slimScroll/jquery.slimscroll.min',
+        iCheck: 'plugins/iCheck/icheck.min',
+        vue: 'plugins/vue',
+
+
+
+        mock: 'http://mockjs.com/dist/mock'
     },
     shim: {
         jquery: {
@@ -21,7 +27,7 @@ require.config({
             deps: ['jquery']
         },
         bootstraptable: {
-            deps: ['jquery', 'css!/tronkerWeb/css/bootstraptable/bootstrap-table.min']
+            deps: ['jquery', 'css!/tronkerWeb/css/plugins/bootstrap-table/bootstrap-table.min']
         },
         metisMenu: {
             deps: ['jquery']
@@ -31,6 +37,9 @@ require.config({
         },
         slimScroll: {
             deps: ['jquery']
+        },
+        iCheck: {
+            deps: ['jquery', 'css!/tronkerWeb/css/plugins/iCheck/custom']
         },
         ejs: {
             exports: 'ejs'

@@ -6,10 +6,12 @@
  */
 
 define([
+    'jquery',
     'layer',
+    'bootstrap',
     'slimScroll',
     'metisMenu'
-], function(layer) {
+], function($, layer) {
 
     function NavToggle() {
         $(".navbar-minimalize").trigger("click")

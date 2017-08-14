@@ -9,7 +9,7 @@ define([
 
     var center = {
         init: function() {
-            alert('首页');
+            console.log('首页');
         }
     }
     center.init();

@@ -6,10 +6,18 @@
 define([
     'contabs'
 ], function() {
-
+    function openNewTab(link) {
+        var frm = $('<form   method="get" action="' + link + '" target="_blank"></form>')
+        $("body").append(frm);
+        frm.submit().remove();
+    }
     var test = {
         init: function() {
-            console.log('test1');
+            $('#btn-refresh').on('click', function() {
+                // openNewTab('http://www.baidu.com');
+                var win = window.open("http://www.baidu.com", '_blank');
+                win.focus();
+            })
         }
     }
     test.init();

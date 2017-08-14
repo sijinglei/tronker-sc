@@ -8,7 +8,7 @@ define([
     'bootstrap'
 ], function($) {
 
-    $(".J_menuItem").on("click", c);
+    $("#wrapper").on("click", '.J_menuItem', menuClick);
 
     function f(l) {
         var k = 0;
@@ -111,7 +111,7 @@ define([
         }
     });
 
-    function c() {
+    function menuClick() {
         var o = $(this).attr("href"),
             m = $(this).data("index"),
             l = $.trim($(this).text()),

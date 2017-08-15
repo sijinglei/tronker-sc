@@ -46,12 +46,22 @@ define([
         },
         bindEvent: function() {
             var _this = this;
-            $('.sidebar-menu').on('click', 'li', function() {
-                var menuId = $(this).find('a').data('menu-id');
-                var data = _this.getSecondMenuList();
-                _this.setMenu(data);
+            $('.top-nav').on('click', 'li', function() {
                 $(this).addClass('active').siblings().removeClass('active');
             })
+
+            $('.sidebar-menu').on('click', 'li', function() {
+                var menuId = $(this).find('a').data('menu-id');
+                $(this).addClass('active').siblings().removeClass('active');
+                if (menuId == 001) {
+                    _this.initMenu();
+                    return false;
+                }
+                var data = _this.getSecondMenuList();
+                _this.setMenu(data);
+            })
+
+
         },
         changeFirstMenu: function() {
 
@@ -60,6 +70,7 @@ define([
         setMenu: function(data) {
             var _html = menuTemp(data);
             $('#side-menu').html(_html);
+            $("#side-menu").metisMenu(); //初始菜单事件
         },
         getSecondMenuList: function() {
             var data = Mock.mock({

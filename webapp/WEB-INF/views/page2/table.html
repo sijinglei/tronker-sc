@@ -27,12 +27,13 @@
                             <div class="input-group">
                                 <input type="text" class="form-control input-sm" name="search" placeholder="搜索邮件标题，正文等" v-model="message">
                                 <div class="input-group-btn">
-                                    <button type="submit" class="btn btn-sm btn-primary" @click="search()">
+                                    <button type="submit" class="btn btn-sm btn-blue" @click="search()">
                                     搜索
                                 </button>
                                 </div>
                             </div>
                         </div>
+                        <button class="btn btn-blue">添加商品</button>
                         <button id="btn-refresh" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新</button>
                         <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为已读"><i class="fa fa-eye"></i>
                         </button>
@@ -44,7 +45,6 @@
                     </div>
                 </div>
                 <div class="mail-box">
-
                     <table class="table table-hover table-mail">
                         <tbody>
                             <tr class="unread">
@@ -229,6 +229,7 @@
                         </tbody>
                     </table>
                 </div>
+                <div id="pageTool"></div>
             </div>
         </div>
     </div>

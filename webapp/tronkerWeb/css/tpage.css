@@ -1,0 +1,114 @@
+.ui-paging-container {
+    font-size: 14px;
+    color: #333;
+}
+
+.ui-paging-container ul {
+    overflow: hidden;
+    text-align: right;
+}
+
+.ui-paging-container ul,
+.ui-paging-container li {
+    list-style: none;
+}
+
+.ui-paging-container li {
+    border-radius: 2px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.ui-paging-container li.ui-pager {
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.ui-paging-container li.ui-pager:hover,
+.ui-paging-container li.focus {
+    background-color: #00AAFF;
+    color: #FFFFFF;
+}
+
+.ui-paging-container li.ui-paging-ellipse {
+    border: none;
+}
+
+.ui-paging-container li.ui-paging-toolbar {
+    padding: 0;
+    width: 95px;
+}
+
+.ui-paging-container li.ui-paging-count {
+    min-width: 100px;
+    width: auto;
+}
+
+.ui-paging-container li.ui-paging-goto {
+    width: 120px;
+    background: #FFFFFF;
+}
+
+.ui-paging-container li.ui-paging-toolbar select {
+    height: 32px;
+    border: 1px solid #ddd;
+    color: #666;
+    line-height: 32px;
+    border-radius: 2px;
+    margin: 0 5px;
+}
+
+.ui-paging-container li.ui-paging-toolbar input,
+.ui-paging-container li.ui-paging-goto input {
+    line-height: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-align: center;
+    width: 32px;
+    margin: 0 0 0 5px;
+    /* vertical-align: middle; */
+}
+
+.ui-paging-container li.ui-paging-goto input {
+    width: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ui-paging-container li.ui-paging-toolbar a,
+.ui-paging-container li.ui-paging-goto a {
+    vertical-align: middle;
+    text-decoration: none;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: top;
+    border-radius: 2px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #666;
+    margin-right: 5px;
+}
+
+.ui-paging-container li.ui-paging-goto a {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+}
+
+.ui-paging-container li.ui-pager-disabled,
+.ui-paging-container li.ui-pager-disabled:hover {
+    background-color: #f6f6f6;
+    ;
+    cursor: default;
+    border: none;
+    color: #ddd;
+}

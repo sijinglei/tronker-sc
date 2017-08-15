@@ -5,16 +5,28 @@
  */
 define([
     'vue',
+    '$',
+    'tPage',
+    'query',
     'iCheck',
     'bootstrap',
     'bootstraptable'
-], function(Vue) {
+], function(Vue, $, Paging) {
 
     var vm;
     var test = {
         init: function() {
             this.initVueObj();
             this.bindEvent();
+            $('#pageTool').Paging({
+                pagesize: 10,
+                count: 120,
+                toolbar: true,
+                callback: function(page, size, count) {
+                    console.log(arguments)
+                    alert('当前第 ' + page + '页,每页 ' + size + '条,总页数：' + count + '页')
+                }
+            });
         },
         initVueObj: function() { //vue实例方法
             var _this = this;
@@ -44,8 +56,8 @@ define([
         },
         bindEvent: function() { //jquery方法要等vue实例渲染完才能加载
             $(".i-checks").iCheck({
-                checkboxClass: "icheckbox_square-green",
-                radioClass: "iradio_square-green",
+                checkboxClass: "icheckbox_square-blue",
+                radioClass: "iradio_square-blue",
             })
             $('#checkAll').on('ifChecked', function(event) {
                 $('input.i-checks').iCheck('check');

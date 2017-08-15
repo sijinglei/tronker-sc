@@ -96,43 +96,43 @@ define([
         $(window).bind("load resize",
             function() {
                 $(this).width() < 769 && ($("body").addClass("mini-navbar"), $(".navbar-static-side").fadeIn())
-            }),
-        $(function() {
-            if ($("#fixednavbar").click(function() {
-                    $("#fixednavbar").is(":checked") ? ($(".navbar-static-top").removeClass("navbar-static-top").addClass("navbar-fixed-top"), $("body").removeClass("boxed-layout"), $("body").addClass("fixed-nav"), $("#boxedlayout").prop("checked", !1), localStorageSupport && localStorage.setItem("boxedlayout", "off"), localStorageSupport && localStorage.setItem("fixednavbar", "on")) : ($(".navbar-fixed-top").removeClass("navbar-fixed-top").addClass("navbar-static-top"), $("body").removeClass("fixed-nav"), localStorageSupport && localStorage.setItem("fixednavbar", "off"))
-                }), $("#collapsemenu").click(function() {
-                    $("#collapsemenu").is(":checked") ? ($("body").addClass("mini-navbar"), SmoothlyMenu(), localStorageSupport && localStorage.setItem("collapse_menu", "on")) : ($("body").removeClass("mini-navbar"), SmoothlyMenu(), localStorageSupport && localStorage.setItem("collapse_menu", "off"))
-                }), $("#boxedlayout").click(function() {
-                    $("#boxedlayout").is(":checked") ? ($("body").addClass("boxed-layout"), $("#fixednavbar").prop("checked", !1), $(".navbar-fixed-top").removeClass("navbar-fixed-top").addClass("navbar-static-top"), $("body").removeClass("fixed-nav"), localStorageSupport && localStorage.setItem("fixednavbar", "off"), localStorageSupport && localStorage.setItem("boxedlayout", "on")) : ($("body").removeClass("boxed-layout"), localStorageSupport && localStorage.setItem("boxedlayout", "off"))
-                }), $(".s-skin-0").click(function() {
-                    return $("body").removeClass("skin-1"),
-                        $("body").removeClass("skin-2"),
-                        $("body").removeClass("skin-3"), !1
-                }), $(".s-skin-1").click(function() {
-                    return $("body").removeClass("skin-2"),
-                        $("body").removeClass("skin-3"),
-                        $("body").addClass("skin-1"), !1
-                }), $(".s-skin-3").click(function() {
-                    return $("body").removeClass("skin-1"),
-                        $("body").removeClass("skin-2"),
-                        $("body").addClass("skin-3"), !1
-                }), localStorageSupport) {
-                var e = localStorage.getItem("collapse_menu"),
-                    a = localStorage.getItem("fixednavbar"),
-                    o = localStorage.getItem("boxedlayout");
-                "on" == e && $("#collapsemenu").prop("checked", "checked"),
-                    "on" == a && $("#fixednavbar").prop("checked", "checked"),
-                    "on" == o && $("#boxedlayout").prop("checked", "checked")
-            }
-            if (localStorageSupport) {
-                var e = localStorage.getItem("collapse_menu"),
-                    a = localStorage.getItem("fixednavbar"),
-                    o = localStorage.getItem("boxedlayout"),
-                    l = $("body");
-                "on" == e && (l.hasClass("body-small") || l.addClass("mini-navbar")),
-                    "on" == a && ($(".navbar-static-top").removeClass("navbar-static-top").addClass("navbar-fixed-top"), l.addClass("fixed-nav")),
-                    "on" == o && l.addClass("boxed-layout")
-            }
-        });
+            })
+    $(function() {
+        if ($("#fixednavbar").click(function() {
+                $("#fixednavbar").is(":checked") ? ($(".navbar-static-top").removeClass("navbar-static-top").addClass("navbar-fixed-top"), $("body").removeClass("boxed-layout"), $("body").addClass("fixed-nav"), $("#boxedlayout").prop("checked", !1), localStorageSupport && localStorage.setItem("boxedlayout", "off"), localStorageSupport && localStorage.setItem("fixednavbar", "on")) : ($(".navbar-fixed-top").removeClass("navbar-fixed-top").addClass("navbar-static-top"), $("body").removeClass("fixed-nav"), localStorageSupport && localStorage.setItem("fixednavbar", "off"))
+            }), $("#collapsemenu").click(function() {
+                $("#collapsemenu").is(":checked") ? ($("body").addClass("mini-navbar"), SmoothlyMenu(), localStorageSupport && localStorage.setItem("collapse_menu", "on")) : ($("body").removeClass("mini-navbar"), SmoothlyMenu(), localStorageSupport && localStorage.setItem("collapse_menu", "off"))
+            }), $("#boxedlayout").click(function() {
+                $("#boxedlayout").is(":checked") ? ($("body").addClass("boxed-layout"), $("#fixednavbar").prop("checked", !1), $(".navbar-fixed-top").removeClass("navbar-fixed-top").addClass("navbar-static-top"), $("body").removeClass("fixed-nav"), localStorageSupport && localStorage.setItem("fixednavbar", "off"), localStorageSupport && localStorage.setItem("boxedlayout", "on")) : ($("body").removeClass("boxed-layout"), localStorageSupport && localStorage.setItem("boxedlayout", "off"))
+            }), $(".s-skin-0").click(function() {
+                return $("body").removeClass("skin-1"),
+                    $("body").removeClass("skin-2"),
+                    $("body").removeClass("skin-3"), !1
+            }), $(".s-skin-1").click(function() {
+                return $("body").removeClass("skin-2"),
+                    $("body").removeClass("skin-3"),
+                    $("body").addClass("skin-1"), !1
+            }), $(".s-skin-3").click(function() {
+                return $("body").removeClass("skin-1"),
+                    $("body").removeClass("skin-2"),
+                    $("body").addClass("skin-3"), !1
+            }), localStorageSupport) {
+            var e = localStorage.getItem("collapse_menu"),
+                a = localStorage.getItem("fixednavbar"),
+                o = localStorage.getItem("boxedlayout");
+            "on" == e && $("#collapsemenu").prop("checked", "checked"),
+                "on" == a && $("#fixednavbar").prop("checked", "checked"),
+                "on" == o && $("#boxedlayout").prop("checked", "checked")
+        }
+        if (localStorageSupport) {
+            var e = localStorage.getItem("collapse_menu"),
+                a = localStorage.getItem("fixednavbar"),
+                o = localStorage.getItem("boxedlayout"),
+                l = $("body");
+            "on" == e && (l.hasClass("body-small") || l.addClass("mini-navbar")),
+                "on" == a && ($(".navbar-static-top").removeClass("navbar-static-top").addClass("navbar-fixed-top"), l.addClass("fixed-nav")),
+                "on" == o && l.addClass("boxed-layout")
+        }
+    });
 
 });

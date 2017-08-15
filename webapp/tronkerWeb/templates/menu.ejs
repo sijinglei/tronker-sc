@@ -1,7 +1,7 @@
      <%if(data && data.length>0){%>
     <%for(var i=0;i<data.length;i++){%>
     <%var dataSencond=data[i].menulist;%>
-        <li>
+        <li class="<%=i==0?'active':''%>">
                         <a href="#">
                             <i class="fa fa-home"></i>
                             <span class="nav-label"><%=data[i].menuName%></span>

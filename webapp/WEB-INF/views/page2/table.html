@@ -23,8 +23,13 @@
                         {{message}} (16)
                     </h2>
                     <div class="mail-tools tooltip-demo m-t-md">
-                        <div class="pull-right mail-search">
+                        <div class="pull-right form-inline">
                             <div class="input-group">
+                                <select id="" class="form-control">
+                                     <option value="">所有类目</option>
+                                 </select>
+                            </div>
+                            <div class="input-group mail-search">
                                 <input type="text" class="form-control input-sm" name="search" placeholder="搜索邮件标题，正文等" v-model="message">
                                 <div class="input-group-btn">
                                     <button type="submit" class="btn btn-sm btn-blue" @click="search()">
@@ -34,13 +39,34 @@
                             </div>
                         </div>
                         <button class="btn btn-blue">添加商品</button>
-                        <button id="btn-refresh" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新</button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为已读"><i class="fa fa-eye"></i>
-                        </button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为重要"><i class="fa fa-exclamation"></i>
-                        </button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为垃圾邮件"><i class="fa fa-trash-o"></i>
-                        </button>
+                        <div class="btn-group">
+                            <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">普通商品 <span class="caret"></span>
+                                </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="buttons.html#">虚拟商品</a>
+                                </li>
+                                <li><a href="buttons.html#" class="font-bold">上架商品</a>
+                                </li>
+                                <li><a href="buttons.html#">下架商品</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="buttons.html#">回收站</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" aria-expanded="false">批量操作 <span class="caret"></span>
+                                </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="buttons.html#">上架</a>
+                                </li>
+                                <li><a href="buttons.html#" class="font-bold">下架</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="buttons.html#">删除</a>
+                                </li>
+                            </ul>
+                        </div>
 
                     </div>
                 </div>

@@ -1,0 +1,16 @@
+@import "minx";
+.m-help {
+    width: 100%;
+    padding: 5px 15px;
+    color: $font;
+    box-sizing: border-box;
+    a {
+        text-decoration: none;
+        font-size: 14px;
+        color: green;
+        display: inline-block;
+    }
+    a:last-child {
+        float: right;
+    }
+}

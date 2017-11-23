@@ -1,0 +1,21 @@
+@import "../assets/fonts/iconfont.css";
+@import "minx";
+.demo {
+    width: 200px;
+    height: 200px;
+    background-color: $bColor;
+    margin: 20px;
+    padding: 10px;
+    .demo1 {
+        box-sizing: content-box;
+        border: 30px solid #12d732;
+    }
+    .demo2 {
+        box-sizing: border-box;
+        border: 30px solid #12d732;
+    }
+    .demo3 {
+        box-sizing: inherit;
+        border: 30px solid #12d732;
+    }
+}
